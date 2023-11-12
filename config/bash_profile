@@ -2,9 +2,8 @@
 alias l='ls -lh'
 alias ll='ls -lha'
 alias rm='rm -i'
-alias mdate='date +%m%d%G%H%M'
 
-# Matt's custom bash prompt
+# Custom bash prompt from another public source we saw online once
 export PS1="\[\e[00;31m\]\u\[\e[0m\]\[\e[00;37m\]@\[\e[0m\]\[\e[00;34m\]\H\[\e[0m\]\[\e[00;37m\]:\[\e[0m\]\[\e[00;32m\]\w\[\e[0m\]\[\e[00;37m\] \t \\$ \[\e[0m\]"
 
 # History customization
