@@ -1,0 +1,16 @@
+# Aliases
+alias l='ls -lh'
+alias ll='ls -lha'
+alias rm='rm -i'
+alias mdate='date +%m%d%G%H%M'
+
+# Matt's custom bash prompt
+export PS1="\[\e[00;31m\]\u\[\e[0m\]\[\e[00;37m\]@\[\e[0m\]\[\e[00;34m\]\H\[\e[0m\]\[\e[00;37m\]:\[\e[0m\]\[\e[00;32m\]\w\[\e[0m\]\[\e[00;37m\] \t \\$ \[\e[0m\]"
+
+# History customization
+export HISTTIMEFORMAT="%m/%d/%G %H:%M:%S "
+export HISTSIZE=5000
+export HISTFILESIZE=5000
+
+# Set vim as the default editor
+export EDITOR=vim
