@@ -10,11 +10,11 @@ The various tools installed in this repo:
 
 Architectures
 -------------
-This container is available for `linux/amd64`, and `linux/arm64`
+This container is available for `linux/arm64`
 
 Availability
 ------------ 
-All `linux/amd64` and `linux/arm64` versions from 1.0.0 onward are publicly available on [GitHub Container Registry](https://github.com/orgs/valorem-labs-inc/packages?repo_name=ubuntu-actions-runner)
+All `linux/arm64` versions from 1.0.0 onward are publicly available on [GitHub Container Registry](https://github.com/orgs/valorem-labs-inc/packages?repo_name=ubuntu-actions-runner)
 
 Maintainers
 ----------
