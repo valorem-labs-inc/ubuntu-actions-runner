@@ -40,5 +40,3 @@ jobs:
           DOCKERFILE: Dockerfile
         run: |
           DOCKER_BUILDKIT=1 docker buildx build --platform linux/arm64 -f $DOCKERFILE -t $ECR_REGISTRY/$ECR_REPOSITORY:latest -t $ECR_REGISTRY/$ECR_REPOSITORY:${{ steps.extract_tag.outputs.tag }} --push .
-
-
