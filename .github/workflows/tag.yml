@@ -30,3 +30,15 @@ jobs:
           platforms: linux/arm64
           tags: ghcr.io/valorem-labs-inc/ubuntu-actions-runner:${{ steps.extract_tag.outputs.tag }}
           push: true
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+      - name:  Build and push the container to to Amazon ECR
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: ubuntu-actions-runner
+          DOCKERFILE: Dockerfile
+        run: |
+          DOCKER_BUILDKIT=1 docker buildx build --platform linux/arm64 -f $DOCKERFILE -t $ECR_REGISTRY/$ECR_REPOSITORY:latest -t $ECR_REGISTRY/$ECR_REPOSITORY:${{ steps.extract_tag.outputs.tag }} --push .
+
+
